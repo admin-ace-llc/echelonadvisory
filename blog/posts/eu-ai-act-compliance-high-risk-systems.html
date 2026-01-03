@@ -1,1 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU AI Act Compliance: What High-Risk AI System Providers Need to Know - Echelon Advisory</title>
+    <meta name="description" content="Complete guide to EU AI Act compliance for high-risk AI systems. Learn requirements, conformity assessment, and implementation.">
+    <link rel="stylesheet" href="../blog.css">
+    <style>
+        .article-content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .article-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .article-header h1 {
+            font-size: 2.5rem;
+            color: #0a1929;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .article-meta {
+            color: #868e96;
+            font-size: 0.95rem;
+        }
+        
+        .article-content h2 {
+            font-size: 1.8rem;
+            color: #0a1929;
+            margin: 2.5rem 0 1rem 0;
+        }
+        
+        .article-content h3 {
+            font-size: 1.4rem;
+            color: #1e3a5f;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .article-content h4 {
+            font-size: 1.2rem;
+            color: #495057;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.8;
+            color: #495057;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 1rem 0 1.5rem 2rem;
+            line-height: 1.8;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.5rem;
+            color: #495057;
+        }
+        
+        .article-content strong {
+            color: #0a1929;
+        }
+        
+        .highlight-box {
+            background: #e7f5ff;
+            border-left: 4px solid #4dabf7;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+        
+        .cta-box {
+            background: #f8f9fa;
+            border: 2px solid #4dabf7;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .cta-box h3 {
+            color: #0a1929;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #4dabf7;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #339af0;
+        }
+        
+        .back-link {
+            margin: 2rem 0;
+        }
+        
+        .back-link a {
+            color: #4dabf7;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">ECHELON ADVISORY</a>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../index.html">Blog</a></li>
+                <li><a href="../../index.html#services">Services</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <article class="article-content">
+        <div class="back-link">
+            <a href="../index.html">← Back to Blog</a>
+        </div>
+        
+        <header class="article-header">
+            <h1>EU AI Act Compliance: What High-Risk AI System Providers Need to Know in 2026</h1>
+            <p class="article-meta">Published January 2026 · 16 min read · By Maneesha Pandey</p>
+        </header>
+
+        <p>The EU AI Act is the world's first comprehensive AI regulation, and it's already in force. If you're developing or deploying AI systems for the EU market, you need to understand your compliance obligations now.</p>
+
+        <p>After building AI safety operational workflows at Google and working with AI systems across platforms, here's what AI Act compliance actually looks like in practice.</p>
+
+        <h2>What Is the EU AI Act?</h2>
+
+        <p>The AI Act (Regulation (EU) 2024/1689) establishes a risk-based framework for AI systems:</p>
+
+        <ul>
+            <li><strong>Unacceptable risk:</strong> Prohibited AI systems (e.g., social scoring, real-time biometric identification in public spaces)</li>
+            <li><strong>High-risk:</strong> AI systems requiring conformity assessment before deployment</li>
+            <li><strong>Limited risk:</strong> Transparency obligations (e.g., chatbots must disclose they're AI)</li>
+            <li><strong>Minimal risk:</strong> No specific obligations beyond existing law</li>
+        </ul>
+
+        <p><strong>Key dates:</strong></p>
+        <ul>
+            <li>February 1, 2025: Prohibitions on unacceptable-risk AI entered into force</li>
+            <li>August 2, 2026: Obligations for high-risk AI systems begin</li>
+            <li>August 2, 2027: Full compliance required for all AI systems</li>
+        </ul>
+
+        <h2>Are You a High-Risk AI System Provider?</h2>
+
+        <p>High-risk AI systems are listed in Annex III of the AI Act. Common categories include:</p>
+
+        <h3>1. Biometric Identification and Categorization</h3>
+        <ul>
+            <li>Remote biometric identification (facial recognition)</li>
+            <li>Biometric categorization systems (emotion recognition, age estimation)</li>
+        </ul>
+
+        <h3>2. Critical Infrastructure</h3>
+        <ul>
+            <li>AI managing traffic, water, gas, electricity, heating systems</li>
+        </ul>
+
+        <h3>3. Education and Vocational Training</h3>
+        <ul>
+            <li>AI determining access to educational institutions</li>
+            <li>AI evaluating learning outcomes or assessing students</li>
+        </ul>
+
+        <h3>4. Employment, Workers Management, Self-Employment</h3>
+        <ul>
+            <li>AI for recruitment (CV screening, interview analysis)</li>
+            <li>AI making promotion/termination decisions</li>
+            <li>AI monitoring worker performance</li>
+            <li>AI allocating tasks to platform workers (gig economy)</li>
+        </ul>
+
+        <h3>5. Access to Essential Services</h3>
+        <ul>
+            <li>AI evaluating creditworthiness</li>
+            <li>AI assessing eligibility for benefits (healthcare, social services)</li>
+            <li>AI dispatching emergency services</li>
+        </ul>
+
+        <h3>6. Law Enforcement</h3>
+        <ul>
+            <li>AI assessing risk of criminal offense</li>
+            <li>AI for polygraph/lie detection</li>
+            <li>AI evaluating evidence reliability</li>
+            <li>AI predicting criminal behavior (predictive policing)</li>
+        </ul>
+
+        <h3>7. Migration, Asylum, Border Control</h3>
+        <ul>
+            <li>AI examining visa/asylum applications</li>
+            <li>AI detecting document forgery</li>
+            <li>AI assessing security risks posed by individuals</li>
+        </ul>
+
+        <h3>8. Justice and Democratic Processes</h3>
+        <ul>
+            <li>AI assisting judicial research or case law interpretation</li>
+        </ul>
+
+        <p><strong>If your AI system falls into these categories, you have high-risk AI obligations.</strong></p>
+
+        <h2>Core Requirements for High-Risk AI Systems</h2>
+
+        <h3>1. Risk Management System (Article 9)</h3>
+
+        <p>You must establish and maintain a risk management system throughout the AI system lifecycle.</p>
+
+        <p><strong>Requirements:</strong></p>
+        <ul>
+            <li>Identify and analyze known and foreseeable risks</li>
+            <li>Estimate and evaluate risks in intended use and reasonably foreseeable misuse</li>
+            <li>Evaluate risks based on data gathered from post-market monitoring</li>
+            <li>Adopt risk mitigation measures</li>
+            <li>Test high-risk AI systems and review risk management system</li>
+            <li>Document all measures taken</li>
+        </ul>
+
+        <p><strong>Iterative process:</strong> Risk management must continue after deployment based on real-world performance data.</p>
+
+        <h3>2. Data Governance (Article 10)</h3>
+
+        <p>Training, validation, and testing datasets must be subject to data governance practices.</p>
+
+        <p><strong>Requirements:</strong></p>
+        <ul>
+            <li>Relevant, representative, free of errors, complete</li>
+            <li>Appropriate statistical properties (distribution, sample size)</li>
+            <li>Consideration of bias that may affect health, safety, fundamental rights</li>
+            <li>Examination of gaps, shortcomings, how they can be addressed</li>
+            <li>Data provenance documentation</li>
+        </ul>
+
+        <p><strong>For training data:</strong></p>
+        <ul>
+            <li>Must be relevant for the intended purpose</li>
+            <li>Must have appropriate statistical properties</li>
+            <li>Biometric data subject to special protections</li>
+        </ul>
+
+        <h3>3. Technical Documentation (Article 11, Annex IV)</h3>
+
+        <p>Comprehensive technical documentation must be drawn up before deployment.</p>
+
+        <p><strong>Must include:</strong></p>
+        <ul>
+            <li>General description of AI system (intended purpose, developer info)</li>
+            <li>Detailed description of system elements and development process</li>
+            <li>Information on monitoring, functioning, control mechanisms</li>
+            <li>Description of risk management system</li>
+            <li>Changes made through the system lifecycle</li>
+            <li>Validation and testing procedures and results</li>
+            <li>Cybersecurity measures</li>
+        </ul>
+
+        <p><strong>This documentation must be kept up-to-date.</strong></p>
+
+        <h3>4. Record-Keeping / Logging (Article 12)</h3>
+
+        <p>High-risk AI systems must automatically log events during operation.</p>
+
+        <p><strong>Requirements:</strong></p>
+        <ul>
+            <li>Logging period appropriate for intended purpose (minimum time to be specified)</li>
+            <li>Enable post-market monitoring and investigation of incidents</li>
+            <li>Ensure traceability of AI system functioning</li>
+            <li>Protected against tampering</li>
+        </ul>
+
+        <p><strong>Typical logs:</strong></p>
+        <ul>
+            <li>Inputs to the AI system</li>
+            <li>Outputs/decisions made</li>
+            <li>Timestamp of each event</li>
+            <li>Identification of users interacting with system</li>
+            <li>Reference to database(s) against which data was checked</li>
+        </ul>
+
+        <h3>5. Transparency and User Information (Article 13)</h3>
+
+        <p>High-risk AI systems must be transparent to users.</p>
+
+        <p><strong>Requirements:</strong></p>
+        <ul>
+            <li>Instructions for use in appropriate digital or non-digital format</li>
+            <li>Written in clear, understandable language</li>
+            <li>Information on identity and contact details of provider</li>
+            <li>Characteristics, capabilities, limitations of system</li>
+            <li>Performance metrics (accuracy, robustness, cybersecurity)</li>
+            <li>Purpose and conditions of use</li>
+            <li>Human oversight measures</li>
+            <li>Expected lifetime and maintenance needs</li>
+        </ul>
+
+        <h3>6. Human Oversight (Article 14)</h3>
+
+        <p>High-risk AI systems must be designed to enable effective human oversight.</p>
+
+        <p><strong>Requirements:</strong></p>
+        <ul>
+            <li>Fully understand capacities and limitations of the AI system</li>
+            <li>Remain aware of automation bias tendency</li>
+            <li>Interpret AI system output correctly</li>
+            <li>Decide not to use the AI system in a particular situation</li>
+            <li>Override or reverse AI system output</li>
+            <li>Intervene or interrupt system operation</li>
+        </ul>
+
+        <p><strong>Implementation varies:</strong></p>
+        <ul>
+            <li>Recruitment AI: Human reviewer makes final hiring decision</li>
+            <li>Credit scoring: Human can override automated decline</li>
+            <li>Law enforcement: Human officer decides whether to act on AI prediction</li>
+        </ul>
+
+        <h3>7. Accuracy, Robustness, Cybersecurity (Article 15)</h3>
+
+        <p>High-risk AI systems must achieve appropriate levels of accuracy, robustness, cybersecurity.</p>
+
+        <p><strong>Requirements:</strong></p>
+        <ul>
+            <li>Declared performance metrics must be achieved and maintained</li>
+            <li>System resilient to errors, faults, inconsistencies</li>
+            <li>Protection against unauthorized third parties</li>
+            <li>Resilient to attempts to alter use or performance</li>
+        </ul>
+
+        <p><strong>Testing required for:</strong></p>
+        <ul>
+            <li>Normal operating conditions</li>
+            <li>Reasonably foreseeable conditions of misuse</li>
+            <li>Potential attacks by third parties</li>
+        </ul>
+
+        <h3>8. Conformity Assessment (Article 43)</h3>
+
+        <p>Before placing a high-risk AI system on the market, you must complete a conformity assessment.</p>
+
+        <p><strong>Two procedures:</strong></p>
+
+        <p><strong>A) Internal Control (Annex VI)</strong> - Most common</p>
+        <ul>
+            <li>Provider conducts own conformity assessment</li>
+            <li>Prepares technical documentation</li>
+            <li>Establishes quality management system</li>
+            <li>Draws up EU declaration of conformity</li>
+            <li>Affixes CE marking</li>
+        </ul>
+
+        <p><strong>B) Third-Party Assessment (Annex VII)</strong> - Required for:</p>
+        <ul>
+            <li>Biometric identification systems</li>
+            <li>AI systems in critical infrastructure (if subject to third-party conformity assessment)</li>
+            <li>AI systems listed in delegated acts as requiring external assessment</li>
+        </ul>
+
+        <p><strong>Notified bodies</strong> conduct third-party assessments and issue conformity certificates.</p>
+
+        <h3>9. Registration in EU Database (Article 49)</h3>
+
+        <p>Before placing a high-risk AI system on the market, you must register it in the EU database.</p>
+
+        <p><strong>Information required:</strong></p>
+        <ul>
+            <li>Name, address, contact details of provider</li>
+            <li>Trade name, address, contact details of authorized representative (if applicable)</li>
+            <li>AI system trade name and additional unambiguous reference</li>
+            <li>Intended purpose</li>
+            <li>Status (on the market, in service, withdrawn, recalled)</li>
+            <li>High-risk classification according to Annex III</li>
+            <li>For third-party assessed systems: name and identification number of notified body</li>
+        </ul>
+
+        <p><strong>Public access:</strong> Much of this information is publicly available in the database.</p>
+
+        <h3>10. Post-Market Monitoring (Article 72)</h3>
+
+        <p>Providers must establish and document a post-market monitoring system.</p>
+
+        <p><strong>Requirements:</strong></p>
+        <ul>
+            <li>Actively and systematically collect, document, analyze data about performance</li>
+            <li>Identify need for immediate corrective action</li>
+            <li>Maintain systematic reporting to downstream economic operators</li>
+            <li>Report serious incidents to market surveillance authorities</li>
+        </ul>
+
+        <p><strong>Monitoring must cover:</strong></p>
+        <ul>
+            <li>How the AI system is actually being used</li>
+            <li>Whether it's performing as intended</li>
+            <li>Emerging risks not identified during conformity assessment</li>
+            <li>User feedback and complaints</li>
+        </ul>
+
+        <h2>AI Act Compliance Roadmap for High-Risk Systems</h2>
+
+        <h3>Phase 1: Classification and Gap Assessment (Weeks 1-4)</h3>
+
+        <p><strong>Week 1-2: Determine if your AI system is high-risk</strong></p>
+
+        <p>Use the classification flowchart:</p>
+        <ol>
+            <li>Is the AI system used in one of the areas listed in Annex III?</li>
+            <li>Is it used for one of the purposes listed in Annex III?</li>
+            <li>Does it pose a risk of harm to health, safety, or fundamental rights?</li>
+        </ol>
+
+        <p>If yes to all three → High-risk AI system</p>
+
+        <p><strong>Week 3-4: Conduct gap assessment</strong></p>
+
+        <p>For each requirement (risk management, data governance, documentation, etc.), assess:</p>
+        <ul>
+            <li>What do we already have?</li>
+            <li>What's missing?</li>
+            <li>What needs to be updated?</li>
+        </ul>
+
+        <p>Create a compliance roadmap with timelines and ownership.</p>
+
+        <h3>Phase 2: Documentation and Technical Implementation (Weeks 5-20)</h3>
+
+        <p><strong>Weeks 5-8: Risk Management System</strong></p>
+        <ul>
+            <li>Establish risk identification process</li>
+            <li>Define risk evaluation criteria</li>
+            <li>Create risk mitigation procedures</li>
+            <li>Set up testing protocols</li>
+            <li>Document everything</li>
+        </ul>
+
+        <p><strong>Weeks 9-12: Data Governance</strong></p>
+        <ul>
+            <li>Audit training/validation/testing datasets</li>
+            <li>Document data provenance</li>
+            <li>Identify and address biases</li>
+            <li>Establish data quality monitoring</li>
+            <li>Create data governance policies</li>
+        </ul>
+
+        <p><strong>Weeks 13-16: Technical Documentation</strong></p>
+        <ul>
+            <li>Compile system description</li>
+            <li>Document development process</li>
+            <li>Describe monitoring and control mechanisms</li>
+            <li>Detail validation and testing results</li>
+            <li>Create cybersecurity documentation</li>
+        </ul>
+
+        <p><strong>Weeks 17-20: Logging and Transparency</strong></p>
+        <ul>
+            <li>Implement automated logging</li>
+            <li>Create instructions for use</li>
+            <li>Draft transparency documentation</li>
+            <li>Design human oversight mechanisms</li>
+            <li>Test logging under various scenarios</li>
+        </ul>
+
+        <h3>Phase 3: Conformity Assessment and Registration (Weeks 21-26)</h3>
+
+        <p><strong>Week 21-24: Conformity Assessment</strong></p>
+
+        <p>If internal control (most cases):</p>
+        <ul>
+            <li>Complete self-assessment against requirements</li>
+            <li>Compile technical documentation</li>
+            <li>Establish quality management system</li>
+            <li>Draft EU declaration of conformity</li>
+        </ul>
+
+        <p>If third-party required:</p>
+        <ul>
+            <li>Identify appropriate notified body</li>
+            <li>Submit application and documentation</li>
+            <li>Support assessment process</li>
+            <li>Receive conformity certificate</li>
+        </ul>
+
+        <p><strong>Week 25-26: EU Database Registration</strong></p>
+        <ul>
+            <li>Gather required information</li>
+            <li>Register in EU database before market placement</li>
+            <li>Verify public information accuracy</li>
+        </ul>
+
+        <h3>Phase 4: Deployment and Ongoing Compliance (Continuous)</h3>
+
+        <p><strong>Post-deployment:</strong></p>
+        <ul>
+            <li>Activate post-market monitoring system</li>
+            <li>Collect and analyze performance data</li>
+            <li>Report serious incidents within required timeframes</li>
+            <li>Update documentation based on learnings</li>
+            <li>Conduct periodic risk reassessments</li>
+            <li>Maintain quality management system</li>
+        </ul>
+
+        <p><strong>Annual review:</strong></p>
+        <ul>
+            <li>Review conformity with AI Act requirements</li>
+            <li>Update technical documentation</li>
+            <li>Assess need for re-certification</li>
+            <li>Evaluate changes in risk profile</li>
+        </ul>
+
+        <h2>Common AI Act Compliance Mistakes</h2>
+
+        <h3>1. Assuming You're Not High-Risk</h3>
+
+        <p>Many providers underestimate whether their AI system is high-risk.</p>
+
+        <p>Examples that ARE high-risk:</p>
+        <ul>
+            <li>"AI assistant for recruiters" → recruitment AI (high-risk)</li>
+            <li>"Fraud detection for lenders" → creditworthiness assessment (high-risk)</li>
+            <li>"Student performance tracking" → educational assessment (high-risk)</li>
+        </ul>
+
+        <p>When in doubt, conduct formal classification assessment.</p>
+
+        <h3>2. Inadequate Data Governance Documentation</h3>
+
+        <p>"We used publicly available data" is not sufficient.</p>
+
+        <p>You need to document:</p>
+        <ul>
+            <li>Specific data sources and provenance</li>
+            <li>How representativeness was evaluated</li>
+            <li>Bias testing conducted and results</li>
+            <li>Mitigation strategies for identified biases</li>
+            <li>How data quality is maintained</li>
+        </ul>
+
+        <h3>3. Generic Risk Assessments</h3>
+
+        <p>"AI might make biased decisions" is too vague.</p>
+
+        <p>Effective risk assessments specify:</p>
+        <ul>
+            <li>Specific harms (e.g., "AI might systematically reject qualified candidates from protected groups")</li>
+            <li>Likelihood estimates (based on testing data)</li>
+            <li>Severity assessments (impact on fundamental rights)</li>
+            <li>Concrete mitigation measures (bias testing, human review, regular audits)</li>
+        </ul>
+
+        <h3>4. Insufficient Human Oversight</h3>
+
+        <p>"Humans can override the AI" is often not enough.</p>
+
+        <p>Effective human oversight requires:</p>
+        <ul>
+            <li>Training on AI system capabilities and limitations</li>
+            <li>Clear protocols for when to override</li>
+            <li>System design that makes override easy and obvious</li>
+            <li>Monitoring of override rates (too low may indicate rubber-stamping)</li>
+        </ul>
+
+        <h3>5. No Post-Market Monitoring Plan</h3>
+
+        <p>You can't just deploy and forget.</p>
+
+        <p>Post-market monitoring requires:</p>
+        <ul>
+            <li>Defined performance metrics</li>
+            <li>Automated data collection</li>
+            <li>Regular analysis and reporting</li>
+            <li>Corrective action triggers</li>
+            <li>Incident reporting procedures</li>
+        </ul>
+
+        <div class="cta-box">
+            <h3>Need Help with AI Act Compliance?</h3>
+            <p>Echelon Advisory provides comprehensive AI Act compliance services including risk classification, gap assessments, documentation support, and conformity assessment preparation.</p>
+            <a href="../../index.html#contact" class="cta-button">Contact Us</a>
+        </div>
+
+        <h2>Key Takeaways</h2>
+
+        <ul>
+            <li>AI Act uses risk-based approach - high-risk systems have strict requirements</li>
+            <li>High-risk classification depends on use case, not just technology</li>
+            <li>Core requirements: risk management, data governance, documentation, logging, transparency, human oversight</li>
+            <li>Conformity assessment required before market placement (internal or third-party)</li>
+            <li>Registration in EU database mandatory for high-risk systems</li>
+            <li>Post-market monitoring is ongoing obligation, not one-time activity</li>
+        </ul>
+
+        <p>AI Act compliance deadlines are approaching (August 2026 for high-risk systems). The AI providers that build robust governance infrastructure now will avoid enforcement actions, market access restrictions, and financial penalties.</p>
+
+        <hr style="margin: 3rem 0; border: none; border-top: 1px solid #e9ecef;">
+
+        <p><strong>About the Author</strong></p>
+
+        <p>Maneesha Pandey is the founder of Echelon Advisory Services, specializing in Trust & Safety, AI Governance, and EU regulatory compliance. She spent 14+ years building AI safety operational workflows at Google and regulatory compliance infrastructure at Amazon and TikTok.</p>
+
+        <p><a href="../../index.html#about">Learn more about Echelon Advisory Services</a></p>
+        
+        <div class="back-link">
+            <a href="../index.html">← Back to Blog</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 Echelon Advisory Services. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;"><a href="../../index.html" style="color: #4dabf7;">Home</a> | <a href="../index.html" style="color: #4dabf7;">Blog</a></p>
+    </footer>
+</body>
+</html>
