@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echelon Advisory - Trust & Safety, AI Governance, Regulatory Operations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+        }
+
+        /* Navigation */
+        nav {
+            background: #0a1929;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4dabf7;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0a1929 0%, #1e3a5f 100%);
+            color: #fff;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #4dabf7;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #339af0;
+        }
+
+        /* Content Sections */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #0a1929;
+        }
+
+        section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #1e3a5f;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #4dabf7;
+        }
+
+        .service-card h3 {
+            color: #0a1929;
+            margin-bottom: 1rem;
+        }
+
+        .service-card ul {
+            margin-left: 1.5rem;
+        }
+
+        .service-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .experience-item {
+            margin-bottom: 2rem;
+        }
+
+        .experience-item h4 {
+            color: #0a1929;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .metrics {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4dabf7;
+        }
+
+        .metric-label {
+            color: #666;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #0a1929;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+        }
+
+        .submit-button {
+            background: #4dabf7;
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .submit-button:hover {
+            background: #339af0;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a1929;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Hide sections by default */
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics {
+                flex-direction: column;
+            }
+        }
+
+        .pricing {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .pricing h4 {
+            color: #0a1929;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="showPage('home')">ECHELON ADVISORY</a>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('services')">Services</a></li>
+                <li><a href="#" onclick="showPage('about')">About</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page-section active">
+        <div class="hero">
+            <h1>Global Trust & Safety, AI Governance, and Regulatory Operations</h1>
+            <p>Building operationally sound safety programs for technology companies, AI startups, and global marketplaces</p>
+            <a href="#" onclick="showPage('services')" class="cta-button">Explore Services</a>
+        </div>
+
+        <section>
+            <h2>Platform-Building Experience That Scales</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 3rem;">14+ years building Trust & Safety and regulatory compliance infrastructure at Amazon, Google, and TikTok. Experience launching products, navigating complex regulatory environments, and designing safety systems that work at global scale.</p>
+
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-number">13%</div>
+                    <div class="metric-label">Reduction in safety incidents through upstream detection</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">36%</div>
+                    <div class="metric-label">Improvement in policy violation detection</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">Zero</div>
+                    <div class="metric-label">Regulatory enforcement actions during CPSC compliance tenure</div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background: #f8f9fa;">
+            <h2>Why Echelon Advisory</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Operational Experience</h3>
+                    <p>Not just strategy—hands-on experience building these systems at scale, from policy design to deployment to crisis management.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Multi-Jurisdiction Expertise</h3>
+                    <p>Deep experience navigating US federal agencies, EU regulatory frameworks, and emerging market compliance requirements.</p>
+                </div>
+                <div class="service-card">
+                    <h3>AI Safety Specialization</h3>
+                    <p>Real-world experience building AI safety operational infrastructure, testing protocols, and incident response systems.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Platform-Building Perspective</h3>
+                    <p>Launched new products and built infrastructure from scratch. Understanding the trade-offs between speed, risk, and compliance.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Services Page -->
+    <div id="services" class="page-section">
+        <section>
+            <h2>Services</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 3rem;">Comprehensive Trust & Safety, AI Governance, and Regulatory Operations services designed for technology companies operating in complex, high-stakes environments.</p>
+
+            <div class="service-card" style="margin-bottom: 3rem;">
+                <h3>Trust & Safety Program Design</h3>
+                <p style="margin-bottom: 1rem;">Build comprehensive safety infrastructure that protects users while enabling platform growth.</p>
+                
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">What We Cover:</h4>
+                <ul>
+                    <li>Platform safety architecture and operational frameworks</li>
+                    <li>Content moderation policy development and enforcement systems</li>
+                    <li>Crisis response protocols and incident management</li>
+                    <li>Cross-functional safety review processes</li>
+                    <li>User reporting systems and appeal mechanisms</li>
+                    <li>Safety metrics, KPIs, and reporting dashboards</li>
+                </ul>
+
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">What to Expect:</h4>
+                <ul>
+                    <li>Week 1-2: Current state assessment, stakeholder interviews, gap analysis</li>
+                    <li>Week 3-4: Framework design, policy documentation, operational workflows</li>
+                    <li>Week 5-6: Implementation planning, team structure recommendations, tooling evaluation</li>
+                    <li>Deliverables: Safety framework documentation, operational playbooks, implementation roadmap</li>
+                </ul>
+
+                <div class="pricing">
+                    <h4>Investment: $15,000 - $50,000</h4>
+                    <p>Pricing based on scope, company size, and platform complexity</p>
+                </div>
+            </div>
+
+            <div class="service-card" style="margin-bottom: 3rem;">
+                <h3>AI Governance & Safety Implementation</h3>
+                <p style="margin-bottom: 1rem;">Implement responsible AI frameworks that balance innovation with user safety and regulatory compliance.</p>
+                
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">What We Cover:</h4>
+                <ul>
+                    <li>AI safety evaluation frameworks and testing protocols</li>
+                    <li>Model behavior monitoring and risk mitigation strategies</li>
+                    <li>Responsible AI policy development</li>
+                    <li>AI incident response and remediation workflows</li>
+                    <li>Bias detection and fairness evaluation</li>
+                    <li>AI transparency and explainability frameworks</li>
+                </ul>
+
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">What to Expect:</h4>
+                <ul>
+                    <li>Week 1-2: AI system audit, risk assessment, regulatory landscape analysis</li>
+                    <li>Week 3-4: Governance framework design, testing protocol development</li>
+                    <li>Week 5-8: Implementation support, team training, monitoring system setup</li>
+                    <li>Deliverables: AI governance documentation, testing protocols, monitoring dashboards, incident response playbooks</li>
+                </ul>
+
+                <div class="pricing">
+                    <h4>Investment: $20,000 - $75,000</h4>
+                    <p>Pricing based on AI system complexity, deployment scale, and regulatory requirements</p>
+                </div>
+            </div>
+
+            <div class="service-card" style="margin-bottom: 3rem;">
+                <h3>Global Regulatory Operations</h3>
+                <p style="margin-bottom: 1rem;">Navigate complex regulatory environments across multiple jurisdictions with confidence.</p>
+                
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">What We Cover:</h4>
+                <ul>
+                    <li>Multi-jurisdiction compliance program design (US, EU, LATAM, APAC)</li>
+                    <li>Regulatory intelligence systems and early warning infrastructure</li>
+                    <li>Agency relationship management and enforcement response</li>
+                    <li>Product safety compliance (CPSC, EU GPSR, international standards)</li>
+                    <li>DSA, AI Act, and emerging regulation readiness</li>
+                    <li>Regulatory risk assessment and mitigation planning</li>
+                </ul>
+
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">What to Expect:</h4>
+                <ul>
+                    <li>Week 1: Regulatory landscape mapping, compliance gap analysis</li>
+                    <li>Week 2-3: Compliance program design, documentation requirements</li>
+                    <li>Week 4-6: Implementation support, agency communication templates, monitoring setup</li>
+                    <li>Deliverables: Compliance roadmap, regulatory playbooks, monitoring systems, agency response protocols</li>
+                </ul>
+
+                <div class="pricing">
+                    <h4>Investment: $15,000 - $60,000</h4>
+                    <p>Pricing based on jurisdictions, regulatory complexity, and product categories</p>
+                </div>
+            </div>
+
+            <div class="service-card" style="margin-bottom: 3rem;">
+                <h3>Fractional Chief Safety Officer</h3>
+                <p style="margin-bottom: 1rem;">Executive-level safety leadership without full-time headcount. Strategic guidance, operational oversight, and crisis management on demand.</p>
+                
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">What We Cover:</h4>
+                <ul>
+                    <li>Strategic safety program leadership and direction</li>
+                    <li>Board-level risk reporting and governance frameworks</li>
+                    <li>Crisis management and incident response leadership</li>
+                    <li>Cross-functional safety integration (product, legal, policy)</li>
+                    <li>Team building, hiring, and organizational design</li>
+                    <li>Regulatory relationship management</li>
+                </ul>
+
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">What to Expect:</h4>
+                <ul>
+                    <li>Month 1: Current state evaluation, strategic roadmap development, quick wins identification</li>
+                    <li>Ongoing: Weekly strategic sessions, ad-hoc crisis support, monthly board reporting</li>
+                    <li>Quarterly: Program reviews, budget planning, team development</li>
+                    <li>Deliverables: Strategic roadmaps, board decks, incident reports, program metrics</li>
+                </ul>
+
+                <div class="pricing">
+                    <h4>Investment: $15,000 - $20,000/month</h4>
+                    <p>Retainer-based engagement with 3-6 month minimum commitment</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <h3>Investor Due Diligence</h3>
+                <p style="margin-bottom: 1rem;">Pre-investment safety infrastructure evaluation and risk assessment for portfolio companies.</p>
+                
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">What We Cover:</h4>
+                <ul>
+                    <li>Trust & Safety infrastructure audit</li>
+                    <li>Regulatory compliance posture assessment</li>
+                    <li>Safety risk quantification and exposure analysis</li>
+                    <li>Post-acquisition integration planning</li>
+                    <li>Safety team capability evaluation</li>
+                    <li>Remediation cost estimation</li>
+                </ul>
+
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">What to Expect:</h4>
+                <ul>
+                    <li>Week 1: Document review, stakeholder interviews, system evaluation</li>
+                    <li>Week 2: Risk analysis, gap identification, cost modeling</li>
+                    <li>Deliverables: Due diligence report, risk matrix, remediation roadmap with cost estimates</li>
+                </ul>
+
+                <div class="pricing">
+                    <h4>Investment: Custom pricing</h4>
+                    <p>Typically $10,000 - $25,000 based on company complexity and timeline</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: center;">
+                <a href="#" onclick="showPage('contact')" class="cta-button">Request a Consultation</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page-section">
+        <section>
+            <h2>About Echelon Advisory</h2>
+            
+            <div class="about-content">
+                <div>
+                    <h3>Who We Are</h3>
+                    <p style="margin-bottom: 2rem;">Echelon Advisory Services is led by Maneesha Pandey, an independent advisor with 14+ years of experience building Trust & Safety and regulatory compliance infrastructure at Amazon, Google, and TikTok.</p>
+                    
+                    <p style="margin-bottom: 2rem;">We specialize in helping technology companies, AI startups, marketplaces, and investors build operationally sound Trust & Safety programs, implement AI governance frameworks, and navigate complex regulatory environments across multiple jurisdictions.</p>
+
+                    <h3 style="margin-top: 2rem;">Our Approach</h3>
+                    <p>We bring platform-building experience—not just theoretical frameworks. Every recommendation is grounded in real-world implementation experience at global scale. We understand the trade-offs between speed, risk, and regulatory requirements because we've navigated them while launching products in complex regulatory environments.</p>
+                </div>
+
+                <div>
+                    <h3>Experience</h3>
+                    
+                    <div class="experience-item">
+                        <h4>Amazon | Regulatory Intelligence</h4>
+                        <ul>
+                            <li>Led Reese's Law policy rollout across marketplace</li>
+                            <li>Managed CPSC voluntary recalls and enforcement response</li>
+                            <li>Architected trade compliance systems for Amazon Haul launch</li>
+                            <li>13% reduction in safety incidents through upstream detection</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <h4>Google | AI Safety Operations</h4>
+                        <ul>
+                            <li>Built AI safety operational workflows</li>
+                            <li>Implemented content moderation frameworks across global markets</li>
+                            <li>36% improvement in policy violation detection</li>
+                            <li>Designed cross-functional safety review processes</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <h4>TikTok | LATAM Trust & Safety</h4>
+                        <ul>
+                            <li>Built Trust & Safety operations from scratch across Latin America</li>
+                            <li>Designed regional compliance frameworks</li>
+                            <li>Established crisis response protocols</li>
+                            <li>Managed cross-border regulatory relationships</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <h3>Who We Serve</h3>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h4>Technology Companies & AI Startups</h4>
+                        <p>Companies building consumer-facing platforms, AI products, or marketplace infrastructure who need Trust & Safety expertise without full-time headcount.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Investors & Private Equity</h4>
+                        <p>Firms conducting due diligence on portfolio companies' safety infrastructure, regulatory compliance posture, or risk exposure.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Global Marketplaces</h4>
+                        <p>E-commerce platforms, two-sided marketplaces, and marketplace aggregators managing cross-border operations and international regulatory compliance.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Enterprise AI Adopters</h4>
+                        <p>Companies deploying AI systems who need governance frameworks, safety evaluation protocols, and responsible AI implementation guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page-section">
+        <section>
+            <h2>Let's Talk</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">Ready to build operationally sound Trust & Safety infrastructure? Let's discuss how Echelon Advisory can help.</p>
+
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Interest *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="trust-safety">Trust & Safety Program Design</option>
+                            <option value="ai-governance">AI Governance & Safety Implementation</option>
+                            <option value="regulatory">Global Regulatory Operations</option>
+                            <option value="fractional-cso">Fractional Chief Safety Officer</option>
+                            <option value="due-diligence">Investor Due Diligence</option>
+                            <option value="other">Other / Not Sure</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required placeholder="Tell us about your needs, timeline, and any specific challenges you're facing..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Submit Inquiry</button>
+                    
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 10px;">
+                <h3 style="margin-bottom: 1rem;">Alternative Contact</h3>
+                <p>Email directly: <a href="mailto:enquiries.talkace@gmail.com" style="color: #4dabf7; font-weight: 600;">enquiries.talkace@gmail.com</a></p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Echelon Advisory Services. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;">Global Trust & Safety, AI Governance, and Regulatory Operations</p>
+    </footer>
+
+    <script>
+        // Page navigation
+        function showPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            const messageDiv = document.getElementById('formMessage');
+            const submitButton = e.target.querySelector('.submit-button');
+            
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            
+            try {
+                // Create email body
+                const emailBody = `
+New Inquiry from Echelon Advisory Website
+
+Name: ${data.name}
+Email: ${data.email}
+Company: ${data.company || 'Not provided'}
+Service Interest: ${data.service}
+
+Message:
+${data.message}
+                `.trim();
+
+                // Using mailto as a fallback - for production, you'd want to use a backend service
+                const mailtoLink = `mailto:enquiries.talkace@gmail.com?subject=New Inquiry from ${encodeURIComponent(data.name)}&body=${encodeURIComponent(emailBody)}`;
+                
+                window.location.href = mailtoLink;
+                
+                messageDiv.textContent = 'Your email client should open. If not, please email us directly at enquiries.talkace@gmail.com';
+                messageDiv.className = 'form-message success';
+                messageDiv.style.display = 'block';
+                
+                e.target.reset();
+                
+            } catch (error) {
+                messageDiv.textContent = 'Something went wrong. Please email us directly at enquiries.talkace@gmail.com';
+                messageDiv.className = 'form-message error';
+                messageDiv.style.display = 'block';
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Submit Inquiry';
+            }
+        });
+    </script>
+</body>
+</html>
