@@ -1,1 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Trust & Safety Program from Scratch - Echelon Advisory</title>
+    <meta name="description" content="Complete guide to building Trust & Safety programs from zero. Lessons from launching safety operations at Amazon, Google, and TikTok.">
+    <link rel="stylesheet" href="../blog.css">
+    <style>
+        .article-content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .article-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .article-header h1 {
+            font-size: 2.5rem;
+            color: #0a1929;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .article-meta {
+            color: #868e96;
+            font-size: 0.95rem;
+        }
+        
+        .article-content h2 {
+            font-size: 1.8rem;
+            color: #0a1929;
+            margin: 2.5rem 0 1rem 0;
+        }
+        
+        .article-content h3 {
+            font-size: 1.4rem;
+            color: #1e3a5f;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .article-content h4 {
+            font-size: 1.2rem;
+            color: #495057;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.8;
+            color: #495057;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 1rem 0 1.5rem 2rem;
+            line-height: 1.8;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.5rem;
+            color: #495057;
+        }
+        
+        .article-content strong {
+            color: #0a1929;
+        }
+        
+        .highlight-box {
+            background: #e7f5ff;
+            border-left: 4px solid #4dabf7;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ff6b6b;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+        
+        .cta-box {
+            background: #f8f9fa;
+            border: 2px solid #4dabf7;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .cta-box h3 {
+            color: #0a1929;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #4dabf7;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #339af0;
+        }
+        
+        .back-link {
+            margin: 2rem 0;
+        }
+        
+        .back-link a {
+            color: #4dabf7;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">ECHELON ADVISORY</a>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../index.html">Blog</a></li>
+                <li><a href="../../index.html#services">Services</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <article class="article-content">
+        <div class="back-link">
+            <a href="../index.html">← Back to Blog</a>
+        </div>
+        
+        <header class="article-header">
+            <h1>Building a Trust & Safety Program from Scratch: Lessons from Amazon, Google, and TikTok</h1>
+            <p class="article-meta">Published January 2026 · 19 min read · By Maneesha Pandey</p>
+        </header>
+
+        <p>Every successful platform eventually needs Trust & Safety. The question is whether you build it proactively or reactively after a crisis.</p>
+
+        <p>I've built Trust & Safety operations from scratch twice—at TikTok LATAM (zero to regional safety infrastructure) and within new product launches at Amazon and Google. Here's what actually works when you're starting from nothing.</p>
+
+        <h2>The Biggest Mistake: Waiting Too Long</h2>
+
+        <p>The most common pattern I see:</p>
+
+        <ol>
+            <li><strong>Launch:</strong> "We'll deal with safety later"</li>
+            <li><strong>Early growth:</strong> "We're too small to have real safety issues"</li>
+            <li><strong>Inflection point:</strong> First serious incident, regulatory inquiry, or press coverage</li>
+            <li><strong>Panic:</strong> Scramble to build safety infrastructure under crisis pressure</li>
+            <li><strong>Over-correct:</strong> Spend 2-3x more than if you'd built it proactively</li>
+        </ol>
+
+        <p><strong>Reality:</strong> It's much cheaper to build safety infrastructure before you need it than to retrofit it during a crisis.</p>
+
+        <h2>When to Start Building Trust & Safety</h2>
+
+        <p><strong>Bare minimum triggers:</strong></p>
+        <ul>
+            <li>You have user-generated content (UGC)</li>
+            <li>Users can interact with each other</li>
+            <li>You handle sensitive data (financial, health, children)</li>
+            <li>You operate in regulated industry</li>
+            <li>You're launching in EU (DSA requirements)</li>
+        </ul>
+
+        <p><strong>Ideal timing:</strong></p>
+        <ul>
+            <li>Before public launch if high-risk category (social, dating, kids, marketplace)</li>
+            <li>At 1,000-10,000 users if medium-risk category</li>
+            <li>Before Series A if you want clean due diligence</li>
+        </ul>
+
+        <div class="warning-box">
+            <p><strong>Too late:</strong></p>
+            <ul>
+                <li>After first serious safety incident</li>
+                <li>During regulatory enforcement</li>
+                <li>When investors ask "who owns Trust & Safety?" and you have no answer</li>
+            </ul>
+        </div>
+
+        <h2>Phase 1: Foundation (Weeks 1-4)</h2>
+
+        <p>Start with the minimum viable safety infrastructure:</p>
+
+        <h3>1. Define What "Unsafe" Means for Your Platform</h3>
+
+        <p>Write down specific prohibited content and behavior for your platform.</p>
+
+        <p><strong>Start with legal minimums:</strong></p>
+        <ul>
+            <li>Illegal content in your primary market (US, EU, etc.)</li>
+            <li>CSAM (child sexual abuse material)</li>
+            <li>Terrorism and violent extremism</li>
+            <li>Illegal goods and services</li>
+            <li>Copyright/IP infringement</li>
+        </ul>
+
+        <p><strong>Add platform-specific harms:</strong></p>
+        <ul>
+            <li>Harassment and bullying</li>
+            <li>Hate speech and discrimination</li>
+            <li>Spam and manipulation</li>
+            <li>Fraud and scams</li>
+            <li>Misinformation (if relevant to your platform)</li>
+        </ul>
+
+        <p><strong>Document as policy:</strong> Create community guidelines or acceptable use policy</p>
+
+        <div class="highlight-box">
+            <p><strong>Example (Dating App):</strong></p>
+            <ul>
+                <li>CSAM - prohibited, report to NCMEC</li>
+                <li>Harassment - unwanted contact after block</li>
+                <li>Catfishing - fake identity/photos</li>
+                <li>Solicitation - prostitution or trafficking</li>
+                <li>Scams - romance scams, financial fraud</li>
+                <li>Hate speech - discrimination based on protected characteristics</li>
+            </ul>
+        </div>
+
+        <h3>2. Build User Reporting Mechanism</h3>
+
+        <p>Users need a way to report safety issues.</p>
+
+        <p><strong>Minimum viable:</strong></p>
+        <ul>
+            <li>"Report" button on content/profiles</li>
+            <li>Basic form: what's wrong, where is it, who are you</li>
+            <li>Email confirmation of receipt</li>
+            <li>Someone monitoring reports daily</li>
+        </ul>
+
+        <p><strong>Tools to use:</strong></p>
+        <ul>
+            <li>Your existing help desk (Zendesk, Intercom, Freshdesk)</li>
+            <li>Google Forms + email forwarding (ultra-early stage)</li>
+            <li>Dedicated report@yourplatform.com email address</li>
+        </ul>
+
+        <p><strong>Don't build custom tooling yet.</strong> Use existing systems.</p>
+
+        <h3>3. Establish Review Process</h3>
+
+        <p>Someone needs to review reports and take action.</p>
+
+        <p><strong>Early stage (<10,000 users):</strong></p>
+        <ul>
+            <li>Founder or early employee reviews reports</li>
+            <li>1-2 hours per day initially</li>
+            <li>Decision: Remove content + warn user, suspend user, or ignore report</li>
+        </ul>
+
+        <p><strong>Response time target:</strong></p>
+        <ul>
+            <li>CSAM / imminent harm: <4 hours</li>
+            <li>Severe violations (terrorism, threats): <24 hours</li>
+            <li>Everything else: <48 hours</li>
+        </ul>
+
+        <p><strong>Create decision log:</strong></p>
+        <ul>
+            <li>Spreadsheet tracking: report received, decision made, action taken, date</li>
+            <li>This becomes your transparency data later</li>
+        </ul>
+
+        <h3>4. Set Up Basic Detection</h3>
+
+        <p>Even pre-launch, implement basic automated detection:</p>
+
+        <p><strong>Technical controls:</strong></p>
+        <ul>
+            <li>Email verification for sign-up</li>
+            <li>CAPTCHA to prevent bots</li>
+            <li>Rate limiting on posting/messaging</li>
+            <li>Profanity filter (use existing library, don't build your own)</li>
+        </ul>
+
+        <p><strong>For images/video:</strong></p>
+        <ul>
+            <li>PhotoDNA for CSAM detection (Microsoft provides free access)</li>
+            <li>Simple hashing to detect exact duplicates</li>
+        </ul>
+
+        <p><strong>For text:</strong></p>
+        <ul>
+            <li>Keyword lists for extreme content (terrorism, CSAM, slurs)</li>
+            <li>Don't over-filter - false positives destroy user experience</li>
+        </ul>
+
+        <p><strong>Realistic early stage:</strong> 90% reactive (user reports) + 10% proactive (automated detection of extreme content)</p>
+
+        <h2>Phase 2: Scaling Infrastructure (Months 2-6)</h2>
+
+        <p>As you grow from thousands to tens of thousands of users:</p>
+
+        <h3>1. Formalize Moderation Operations</h3>
+
+        <p><strong>Hire your first Trust & Safety person:</strong></p>
+        <ul>
+            <li>Title: Trust & Safety Manager or Trust & Safety Lead</li>
+            <li>Reports to: Founder, CEO, or COO initially</li>
+            <li>Responsibilities: Own moderation operations, vendor management, policy refinement</li>
+        </ul>
+
+        <p><strong>Typical first hire profile:</strong></p>
+        <ul>
+            <li>2-5 years content moderation experience</li>
+            <li>Managed moderation teams or vendors</li>
+            <li>Understands policy development</li>
+            <li>Comfortable with ambiguity</li>
+        </ul>
+
+        <p><strong>Salary range:</strong> $80K - $120K depending on market and experience</p>
+
+        <h3>2. Implement Moderation Vendor (If Needed)</h3>
+
+        <p><strong>When to use moderation vendors:</strong></p>
+        <ul>
+            <li>Volume >100 reports/day</li>
+            <li>Need 24/7 coverage</li>
+            <li>Multi-language requirements</li>
+            <li>Want to avoid hiring large in-house team</li>
+        </ul>
+
+        <p><strong>Major vendors:</strong></p>
+        <ul>
+            <li>TaskUs - good for startups, flexible</li>
+            <li>Accenture - enterprise-grade</li>
+            <li>Telus International - mid-market</li>
+            <li>CNET (Centific) - AI training + moderation</li>
+        </ul>
+
+        <p><strong>Typical pricing:</strong> $8-$15 per hour per moderator (offshore), $25-$40 (US-based)</p>
+
+        <p><strong>Hybrid model (recommended):</strong></p>
+        <ul>
+            <li>Vendor handles volume and 24/7 coverage</li>
+            <li>Internal person handles escalations, policy decisions, quality assurance</li>
+        </ul>
+
+        <h3>3. Build Automated Detection (v2)</h3>
+
+        <p>Invest in better proactive detection:</p>
+
+        <p><strong>Text classification:</strong></p>
+        <ul>
+            <li>Use pre-trained models (OpenAI Moderation API, Perspective API, Hive)</li>
+            <li>Don't build your own ML models yet (too expensive, not better than off-the-shelf)</li>
+        </ul>
+
+        <p><strong>Image/video detection:</strong></p>
+        <ul>
+            <li>Hive, Clarifai, or AWS Rekognition for NSFW detection</li>
+            <li>PhotoDNA for CSAM (mandatory)</li>
+            <li>Google Vision API for general classification</li>
+        </ul>
+
+        <p><strong>Behavioral signals:</strong></p>
+        <ul>
+            <li>New account spam patterns (post volume, follow patterns)</li>
+            <li>Coordinated activity detection</li>
+            <li>Suspicious engagement patterns</li>
+        </ul>
+
+        <p><strong>Don't over-automate:</strong> Keep humans in the loop for final decisions on removal</p>
+
+        <h3>4. Create Appeals Process</h3>
+
+        <p>Users will disagree with your moderation decisions. You need a way to handle appeals.</p>
+
+        <p><strong>Basic appeals process:</strong></p>
+        <ol>
+            <li>User clicks "Appeal" on enforcement notification</li>
+            <li>Form asks: why do you think this was a mistake?</li>
+            <li>Different reviewer (not original moderator) re-reviews</li>
+            <li>Decision within 48-72 hours</li>
+            <li>Overturn if wrong, uphold with explanation if correct</li>
+        </ol>
+
+        <p><strong>Track appeal metrics:</strong></p>
+        <ul>
+            <li>Appeal rate (what % of enforcements are appealed)</li>
+            <li>Overturn rate (what % of appeals result in reversal)</li>
+            <li>Target overturn rate: 5-15% (too low = not enough appeals, too high = poor initial accuracy)</li>
+        </ul>
+
+        <h3>5. Establish Incident Response Plan</h3>
+
+        <p>You will have safety incidents. Plan before they happen.</p>
+
+        <p><strong>Define severity levels:</strong></p>
+        <ul>
+            <li><strong>P0 (Critical):</strong> CSAM, imminent harm, active shooter, regulatory enforcement</li>
+            <li><strong>P1 (High):</strong> Media coverage, high-profile user incident, wave of similar issues</li>
+            <li><strong>P2 (Medium):</strong> Individual serious violation, complaint from authority</li>
+            <li><strong>P3 (Low):</strong> Standard policy violation</li>
+        </ul>
+
+        <p><strong>For each severity:</strong></p>
+        <ul>
+            <li>Who gets notified (CEO, legal, PR, etc.)</li>
+            <li>How quickly must we respond</li>
+            <li>Who has decision authority</li>
+            <li>Who communicates externally</li>
+        </ul>
+
+        <p><strong>Practice:</strong> Run incident simulations quarterly</p>
+
+        <h2>Phase 3: Mature Operations (Months 6-18)</h2>
+
+        <p>As you scale to hundreds of thousands or millions of users:</p>
+
+        <h3>1. Build Cross-Functional Safety Processes</h3>
+
+        <p>Trust & Safety can't be siloed. Integrate with:</p>
+
+        <p><strong>Product:</strong> Safety review for all new features</p>
+        <ul>
+            <li>Who can use this feature? (age, verified users, etc.)</li>
+            <li>What can go wrong? (harassment, spam, fraud)</li>
+            <li>What safety controls are needed?</li>
+            <li>Launch checklist includes safety sign-off</li>
+        </ul>
+
+        <p><strong>Engineering:</strong> Safety infrastructure roadmap</p>
+        <ul>
+            <li>Detection systems</li>
+            <li>Logging and auditability</li>
+            <li>Account action infrastructure (warnings, suspensions, bans)</li>
+            <li>Appeals handling</li>
+        </ul>
+
+        <p><strong>Legal:</strong> Regulatory compliance alignment</p>
+        <ul>
+            <li>Which regulations apply</li>
+            <li>What documentation is required</li>
+            <li>Regulatory reporting obligations</li>
+            <li>Authority relationship management</li>
+        </ul>
+
+        <p><strong>Communications/PR:</strong> Crisis communication</p>
+        <ul>
+            <li>Spokespeople trained on safety topics</li>
+            <li>Pre-drafted holding statements</li>
+            <li>Escalation triggers for PR involvement</li>
+        </ul>
+
+        <h3>2. Implement Quality Assurance</h3>
+
+        <p>How do you know your moderation is accurate?</p>
+
+        <p><strong>Sampling and audits:</strong></p>
+        <ul>
+            <li>Review 10% of all moderation decisions weekly</li>
+            <li>Separate QA team from front-line moderators</li>
+            <li>Track accuracy by moderator, policy type, content category</li>
+        </ul>
+
+        <p><strong>Calibration sessions:</strong></p>
+        <ul>
+            <li>Weekly meetings with moderators</li>
+            <li>Review edge cases together</li>
+            <li>Ensure consistent policy interpretation</li>
+            <li>Update guidance based on new patterns</li>
+        </ul>
+
+        <p><strong>User feedback:</strong></p>
+        <ul>
+            <li>Track appeal overturn rates</li>
+            <li>Survey users after enforcement (why did this happen?)</li>
+            <li>Incorporate feedback into policy refinement</li>
+        </ul>
+
+        <p><strong>Target accuracy:</strong> 92-96% (perfect accuracy impossible with subjective policies)</p>
+
+        <h3>3. Develop Transparency Reporting</h3>
+
+        <p>Even before it's legally required (DSA, etc.), build transparency reporting:</p>
+
+        <p><strong>Track:</strong></p>
+        <ul>
+            <li>Volume of user reports received</li>
+            <li>Volume of content actioned (removed, warnings, suspensions)</li>
+            <li>Action rate (what % of reports lead to action)</li>
+            <li>Average time to action</li>
+            <li>Appeal volume and overturn rate</li>
+            <li>Proactive detection vs. user-reported</li>
+        </ul>
+
+        <p><strong>Publish:</strong> Quarterly or semi-annually</p>
+
+        <p><strong>Benefits:</strong></p>
+        <ul>
+            <li>Accountability to users</li>
+            <li>Investor/board confidence</li>
+            <li>Regulatory compliance (if/when required)</li>
+            <li>Benchmarking and improvement</li>
+        </ul>
+
+        <h2>Common Mistakes When Building Trust & Safety</h2>
+
+        <h3>Mistake 1: "We're Different, Normal Rules Don't Apply"</h3>
+
+        <p>I hear this constantly: "We're a professional network, we don't have safety issues" or "Our users are vetted, we don't need moderation."</p>
+
+        <p><strong>Reality:</strong> Every platform with humans has safety issues. LinkedIn has fraud and harassment. GitHub has harassment and spam. Professional platforms aren't exempt.</p>
+
+        <p><strong>Solution:</strong> Assume you'll have safety issues and build accordingly.</p>
+
+        <h3>Mistake 2: Over-Reliance on Automation</h3>
+
+        <p>"We'll just use AI to moderate everything automatically."</p>
+
+        <p><strong>Reality:</strong> Current AI can help detect, but shouldn't auto-remove except in narrow cases (exact CSAM hashes, known malware). Humans needed for context and edge cases.</p>
+
+        <p><strong>Solution:</strong> Automation flags for human review. Humans make final decisions.</p>
+
+        <h3>Mistake 3: Vague Policies</h3>
+
+        <p>"Be respectful" and "don't abuse the platform" are not enforceable policies.</p>
+
+        <p><strong>Reality:</strong> Moderators and users need specific definitions. What exactly is harassment? What's hate speech? What's spam?</p>
+
+        <p><strong>Solution:</strong> Write specific, enforceable policies with examples. "Harassment includes repeated unwanted contact after a user blocks you" is enforceable.</p>
+
+        <h3>Mistake 4: No Policy Enforcement for "Important" Users</h3>
+
+        <p>"This user drives a lot of engagement, we can't ban them even though they violate policies."</p>
+
+        <p><strong>Reality:</strong> Inconsistent enforcement destroys trust and creates legal risk. If your policy says X is prohibited, you must enforce on everyone.</p>
+
+        <p><strong>Solution:</strong> Enforce policies consistently. If an important user is valuable despite policy violations, change the policy—don't make exceptions.</p>
+
+        <h3>Mistake 5: Treating Safety as Cost Center</h3>
+
+        <p>"Trust & Safety doesn't make money, minimize spending on it."</p>
+
+        <p><strong>Reality:</strong> Safety failures cost more than safety infrastructure. One major incident can cost millions in legal fees, settlements, lost users, PR damage.</p>
+
+        <p><strong>Solution:</strong> Treat safety as risk mitigation. The ROI is avoiding catastrophic losses.</p>
+
+        <div class="cta-box">
+            <h3>Need Help Building Your Trust & Safety Program?</h3>
+            <p>Echelon Advisory helps startups build Trust & Safety infrastructure from scratch, based on lessons from launching operations at Amazon, Google, and TikTok.</p>
+            <p><strong>Services:</strong></p>
+            <ul style="text-align: left; max-width: 600px; margin: 1rem auto;">
+                <li><strong>Phase 1: Foundation Setup</strong> ($10K-$20K) - Policies, reporting, review process, basic detection</li>
+                <li><strong>Phase 2: Scaling Infrastructure</strong> ($25K-$50K) - Vendor selection, advanced detection, appeals, incident response</li>
+                <li><strong>Phase 3: Ongoing Advisory</strong> ($5K-$10K/month) - Strategic guidance, policy updates, compliance reviews</li>
+            </ul>
+            <a href="../../index.html#contact" class="cta-button">Contact Us</a>
+        </div>
+
+        <h2>Key Takeaways</h2>
+
+        <ul>
+            <li>Start building Trust & Safety before you need it (much cheaper than retrofitting)</li>
+            <li>Minimum viable: policies, reporting mechanism, review process, basic detection</li>
+            <li>Use off-the-shelf tools, don't build custom systems early</li>
+            <li>Hire your first Trust & Safety person around 10K-50K users</li>
+            <li>Human oversight required even with automation</li>
+            <li>Integrate safety into product development, not bolted on after</li>
+            <li>Treat safety as risk mitigation, not cost center</li>
+            <li>Plan for compliance with applicable regulations from day 1</li>
+        </ul>
+
+        <p>Building Trust & Safety infrastructure proactively is one of the best investments a startup can make. It's cheaper, faster, and less stressful than building it reactively during a crisis.</p>
+
+        <hr style="margin: 3rem 0; border: none; border-top: 1px solid #e9ecef;">
+
+        <p><strong>About the Author</strong></p>
+
+        <p>Maneesha Pandey is the founder of Echelon Advisory Services, specializing in Trust & Safety, AI Governance, and EU regulatory compliance. She spent 14+ years building Trust & Safety infrastructure at Amazon, Google, and TikTok, including launching TikTok's LATAM Trust & Safety operations from scratch.</p>
+
+        <p><a href="../../index.html#about">Learn more about Echelon Advisory Services</a></p>
+        
+        <div class="back-link">
+            <a href="../index.html">← Back to Blog</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>&copy; 2026 Echelon Advisory Services. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;"><a href="../../index.html" style="color: #4dabf7;">Home</a> | <a href="../index.html" style="color: #4dabf7;">Blog</a></p>
+    </footer>
+</body>
+</html>
